@@ -1,13 +1,10 @@
-# import time
+import os
 
-# for s in range(10,0,-1):
-#     print (s)
-#     time.sleep(1)
-# print("happy new year!!")    
+path="C:\\Users\\Admin\\OneDrive\\Desktop\\bola.txt"
 
-tuple={1,2,3,4,5,6,7,8,8}
-sum=0
-for i in tuple:
-    sum+=i
-
-print(sum)
+if os.path.isdir(path):
+    print("it is thre my guy")
+elif os.path.isfile(path):
+    print("it is a file nigga")
+elif os.path.exists(path):
+    print("it is real my nigga")

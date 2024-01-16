@@ -1,45 +1,35 @@
-import random
+def product(a,b):
+    result=(a*b)
+    return result
+
+def add(x,y):
+    result_1=(x+y)
+    return result_1
+
+def both(result,result_1):
+    result_2= (result/result_1)
+    print(f"your result is :{result_2}\n\n")
+
+
 while True:
+    a= int(input("input your first numerator::"))
+    b= int(input("input yor second nimerator:: "))
+    x= int(input("onput your first denomenator:: "))
+    y= int(input ("input your second denomenator:: "))
 
-    choices=["rock","paper","scissors"]
+    result = product(a, b)
+    result_1 = add(x, y)
+    both(result, result_1)
 
-    computer_choice=random.choice(choices)
-    player_choice=None
-    while player_choice not in choices:
-        player_choice=input("rock,paper,scissors  ").lower()
 
-    if computer_choice==player_choice:
-        print(f"computer ::{computer_choice}")
-        print(f" your choice::{player_choice}")
-        print("its a tie nigga!!")
-    elif computer_choice=="rock" and player_choice=="paper":
-        print(f"computer ::{computer_choice}")
-        print(f"your choice::{player_choice}")
-        print("you win nigga ")
-    elif computer_choice=="paper" and player_choice=="rock":
-        print(f"computer ::{computer_choice}")
-        print(f"your choice::{player_choice}")
-        print("you loose nigga ")
-    elif computer_choice=="scissors" and player_choice=="paper":
-        print(f"computer ::{computer_choice}")
-        print(f"your choice::{player_choice}")
-        print("you lose my guy!!")
-    elif player_choice=="scissors" and computer_choice=="paper":    
-        print(f"computer ::{computer_choice}\n")
-        print(f"your choice::{player_choice}\n")
-        print("you win")
-    elif computer_choice=="rock" and player_choice=="paper":
-        print(f"computer::{computer_choice}")     
-        print(f"your choice is:: {player_choice}")
-        print("you win my guy!!")
-    elif player_choice=="rock" and computer_choice=="paper":
-        print(f"computer ::{computer_choice}")
-        print(f"your choice::{player_choice}")
-        print("you lose mada faka")
-    play_again=(input("Do you want to play again? (yes) or (no)"))
-    if play_again != "yes":
+    product(a,b)
+    add(x,y)
+    both(result,result_1)
+    quit=input("do you want to quit?: (yes) or(no)").lower()
+
+    if quit =="yes":
         break
-
-print("good bye nigga")
-            
-
+    else:
+        continue
+    
+    

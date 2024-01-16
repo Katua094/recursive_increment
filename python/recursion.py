@@ -1,15 +1,9 @@
-# def add_one(num):
-#     if (num >= 9):
-#         return num + 1
-#     total= num + 1
-#     print(total)
-#     return add_one(total)
-# print(add_one(2))
+big_list = ["A:new", "B:now", "C:latter", "D:jangle", "E:maker"]
+d_list = [["(down", "up)"], ["(lowndown", "eggs)"], ["(kondooo", "mallo)"], ["(kilele", "bomalo)"]]
 
-password=input("put down your password >> ")
-if len(password)<8:
-    print("your password is too short!git !")
-elif len(password) >10:
-    print("your password is too long my guy")
-else:
-    print("good job")
+num = 1
+for p in big_list:
+    print(p)
+    for i in d_list[num - 1]:
+        print(i)
+num += 1  # Incrementing num inside the outer loop resets it for each iteration

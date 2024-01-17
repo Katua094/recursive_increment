@@ -1,10 +1,38 @@
-import os
+class Animal:
 
-path="C:\\Users\\Admin\\OneDrive\\Desktop\\bola.txt"
+    Alive=True
 
-if os.path.isdir(path):
-    print("it is thre my guy")
-elif os.path.isfile(path):
-    print("it is a file nigga")
-elif os.path.exists(path):
-    print("it is real my nigga")
+    def eat(self):
+        print("This animal is eating!!")
+    
+    def sleep(self):
+        print("This animal is sleeping")
+
+
+
+
+class Dog(Animal):
+    def play(self):
+        print("This dog is playing!")
+
+class Cat(Animal):
+    def meow(self):
+        print("This Cat is meowing!!")
+
+class Hawk(Animal):
+    def fly(self):
+        print("This hawk is flying look!!")
+
+
+
+hawk=Hawk()
+
+hawk.sleep()
+hawk.fly()
+cat=Cat
+dog= Dog()
+
+dog.eat()
+dog.play()
+
+print(cat.Alive)

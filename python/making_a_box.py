@@ -1,41 +1,27 @@
-import random
-while True:
+class Rectangle:
+    def __init__(self,width,length):
+        self.height=width
+        self.length=length
+    
 
-    choices=["rock","paper","scissors"]
+class Square(Rectangle):
+    def __init__(self,length,width):
+        super().__init__(length,width)
+    def area(self):
+        return self.length*self.length
+    
+class Cube(Rectangle):
+    def __init__(self,height,length,width):
+        self.height=height
+        super().__init__(width,length)
+    def volume(self):
+        return self.height*self.length*self.length
 
-    computer_choice=random.choice(choices)
-    player_choice=None
-    while player_choice not in choices:
-        player_choice=input("rock,paper,scissors  ").lower()
 
-    if computer_choice==player_choice:
-        print(f"computer ::{computer_choice}")
-        print(f" your choice::{player_choice}")
-        print("its a tie nigga!!")
-    elif computer_choice=="rock" and player_choice=="paper":
-        print(f"computer ::{computer_choice}")
-        print(f"your choice::{player_choice}")
-        print("you win nigga ")
-   
-    elif computer_choice=="scissors" and player_choice=="paper":
-        print(f"computer ::{computer_choice}")
-        print(f"your choice::{player_choice}")
-        print("you lose my guy!!")
-    elif player_choice=="scissors" and computer_choice=="paper":    
-        print(f"computer ::{computer_choice}\n")
-        print(f"your choice::{player_choice}\n")
-        print("you win")
-    elif computer_choice=="rock" and player_choice=="paper":
-        print(f"computer::{computer_choice}")     
-        print(f"your choice is:: {player_choice}")
-        print("you win my guy!!")
-    elif player_choice=="rock" and computer_choice=="paper":
-        print(f"computer ::{computer_choice}")
-        print(f"your choice::{player_choice}")
-        print("you lose mada faka")
-    play_again=(input("Do you want to play again? (yes) or (no)"))
-    if play_again != "yes":
-        break
+square=Square(3,3)
 
-print("good bye nigga")
-            
+cube=Cube(3,3,3)
+
+print(cube.volume())
+print(square.area())
+

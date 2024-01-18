@@ -1,35 +1,25 @@
-def product(a,b):
-    result=(a*b)
-    return result
+class Dog:
+    def speak(self):
+        return "Woof!"
 
-def add(x,y):
-    result_1=(x+y)
-    return result_1
+class Cat:
+    def speak(self):
+        return "Meow!"
 
-def both(result,result_1):
-    result_2= (result/result_1)
-    print(f"your result is :{result_2}\n\n")
+class Duck:
+    def speak(self):
+        return "Quack!"
 
+# Function that expects an object with a 'speak' method
+def animal_sound(animal):
+    return animal.speak()
 
-while True:
-    a= int(input("input your first numerator::"))
-    b= int(input("input yor second nimerator:: "))
-    x= int(input("onput your first denomenator:: "))
-    y= int(input ("input your second denomenator:: "))
+# Instances of different classes
+dog = Dog()
+cat = Cat()
+duck = Duck()
 
-    result = product(a, b)
-    result_1 = add(x, y)
-    both(result, result_1)
-
-
-    product(a,b)
-    add(x,y)
-    both(result,result_1)
-    quit=input("do you want to quit?: (yes) or(no)").lower()
-
-    if quit =="yes":
-        break
-    else:
-        continue
-    
-    
+# All these objects can be passed to the function
+print(animal_sound(dog))  # Outputs: Woof!
+print(animal_sound(cat))  # Outputs: Meow!
+print(animal_sound(duck)) # Outputs: Quack!

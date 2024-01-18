@@ -1,9 +1,32 @@
-big_list = ["A:new", "B:now", "C:latter", "D:jangle", "E:maker"]
-d_list = [["(down", "up)"], ["(lowndown", "eggs)"], ["(kondooo", "mallo)"], ["(kilele", "bomalo)"]]
+def add(x,y):
+    result=x+y
+    return result
 
-num = 1
-for p in big_list:
-    print(p)
-    for i in d_list[num - 1]:
-        print(i)
-num += 1  # Incrementing num inside the outer loop resets it for each iteration
+
+def sutract(x,y):
+    result = x-y
+    return result
+def divide(x,y):
+    if y==0:
+        print("number cant be divided by zero")
+    else:
+        result=x/y
+    return result
+def multiply(x,y):
+    result=x*y
+    return result
+
+operation={
+    "add":add(),
+    "subtract":sutract(),
+    "divide":divide(),
+    "multiply":multiply()
+}
+
+
+
+def main():
+    while True:
+        user_input=input("what operation do you want ?").lower()
+        x=input("put down the first number>>")
+        y=input("putdown your second number>>")

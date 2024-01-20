@@ -1,38 +1,13 @@
-class Animal:
+#walrus operator
+# food=[]
+# while True:
+#     list=input("which foods do you like ? ").capitalize()
+#     food.append(list)
+#     if list== "Quit":
+#         break
 
-    Alive=True
+foods = []
+while (food := input("What food do you like? ").capitalize()) != "Quit":
+    foods.append(food)
 
-    def eat(self):
-        print("This animal is eating!!")
-    
-    def sleep(self):
-        print("This animal is sleeping")
-
-
-
-
-class Dog(Animal):
-    def play(self):
-        print("This dog is playing!")
-
-class Cat(Animal):
-    def meow(self):
-        print("This Cat is meowing!!")
-
-class Hawk(Animal):
-    def fly(self):
-        print("This hawk is flying look!!")
-
-
-
-hawk=Hawk()
-
-hawk.sleep()
-hawk.fly()
-cat=Cat
-dog= Dog()
-
-dog.eat()
-dog.play()
-
-print(cat.Alive)
+print("List of foods:", foods)

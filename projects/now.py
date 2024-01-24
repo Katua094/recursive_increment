@@ -22,9 +22,9 @@ while True:
         if guess == guess_comp:
             print("Congratulations! You guessed the correct number.")
             break
-        elif 40 < guess < 50:
+        elif guess_comp-guess>1 or 0:
             print("A little bit more!")
-        elif guess > 50:
+        elif guess-guess_comp>1 or 0:
             print("Less, less!")
         else:
             print("Your guess is not in the correct range.")

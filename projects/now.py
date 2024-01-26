@@ -1,33 +1,21 @@
-import random
+# # Recursion with python
 
-# Generate a random number between 10 and 100
-guess_comp = random.randint(10, 100)
+# def factorial(n):
+#     if n==0 or n==1:
+#         return 1
+#     else:
+#      return   n*factorial(n-1)
+    
 
-print("Welcome to my guessing game!\n")
-print("Put down 'quit' in order to quit the game.")
-print("Enter a number between 10 and 100.")
+# n=int(input("what is your number?"))
+# 3
+# # Calculate and print the factorial
+# result = factorial(n)
+# print(f"The factorial of {n} is: {result}")
 
-while True:
-    user_input = input("What is your guess: ")
 
-    # Check if the user wants to quit
-    if user_input.lower() == 'quit':
-        print("Thanks for playing. Goodbye!")
-        break
+path="C:\\Users\\Admin\\OneDrive\\Desktop\\bola.txt"
 
-    try:
-        # Convert the user input to an integer
-        guess = int(user_input)
-
-        if guess == guess_comp:
-            print("Congratulations! You guessed the correct number.")
-            break
-        elif guess_comp-guess>1 or 0:
-            print("A little bit more!")
-        elif guess-guess_comp>1 or 0:
-            print("Less, less!")
-        else:
-            print("Your guess is not in the correct range.")
-
-    except ValueError:
-        print("Please enter a valid number or 'quit'.")
+with open(path,"a") as file:
+    file.write(path)
+print( file.write(path))

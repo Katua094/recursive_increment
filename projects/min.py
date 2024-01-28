@@ -1,6 +1,7 @@
-#Reading a file with python 
+slice=slice(9,-4)
 
-path="C:\\Users\\Admin\\OneDrive\\Desktop\\bola.txt"
-with open(path,"r")as file:
-  for line in file:
-    print(line.strip())
+web_1="http\\www.google.com"
+web_2="http\\www.wipedia.com"
+
+print(web_1[slice]+" website")
+print(web_2[slice] +" webssite")

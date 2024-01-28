@@ -1,21 +1,18 @@
-# # Recursion with python
+#password generator 
 
-# def factorial(n):
-#     if n==0 or n==1:
-#         return 1
-#     else:
-#      return   n*factorial(n-1)
+import random
+import string
+
+def generate_password(length=12):
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(random.choice(characters) for _ in range(length))
+    return password
+
+if __name__ == "__main__":
+    password_length = int(input("Enter the desired length for the password: "))
     
-
-# n=int(input("what is your number?"))
-# 3
-# # Calculate and print the factorial
-# result = factorial(n)
-# print(f"The factorial of {n} is: {result}")
-
-
-path="C:\\Users\\Admin\\OneDrive\\Desktop\\bola.txt"
-
-with open(path,"a") as file:
-    file.write(path)
-print( file.write(path))
+    if password_length < 1:
+        print("Password length should be at least 1.")
+    else:
+        generated_password = generate_password(password_length)
+        print("Generated Password:", generated_password)

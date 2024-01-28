@@ -1,13 +1,13 @@
-import os
+#Exeptions
 
-path="C:\\Users\\Admin\\OneDrive\\Desktop\\bola.txt"
 
-if os.path.isdir(path):
-    print("There is a directory")
-else:
-    print("Nop")
+try:
+    def divide(q,i):
+    
+        result=q/i
+        return result
+    
+    divide(3,0)
+except ZeroDivisionError:
+    print("you cannot divide a nuber by zero!!")
 
-if os.path.isfile(path):
-    print("It is a file !!")
-if os.path.exists(path):
-    print("it exists")

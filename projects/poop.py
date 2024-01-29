@@ -1,22 +1,17 @@
-#Abstract Methods
-from abc import ABC ,abstractmethod
+#objects as argurments
 
-class parent(ABC):
-    @abstractmethod
-    def eat(self):
-        print("This madafaka is eating.")
-    @abstractmethod    
-    def sleep(self):
-        print("This nigga is sleeping.")
+class Car:
+    def __init__(self,name):
+        self.name= name
+    def __str__(self):
+        return self.name
 
 
-class Child(parent):
-    pass
-try:
+        
+def color(vehicle,color):
+    Car.color=color
+    print(f"this {vehicle} is {color} in color.")
 
-    object=Child()
+dodge=Car("dodge")
 
-    object.eat()
-
-except TypeError:
-    print("Write individual methods of the child")
+color(dodge,"red")

@@ -1,17 +1,22 @@
-class Car:
-    def drive(self):
-        print("This car is moving?")
-    def stop(self):
-        print("This car has stopped")
+#Abstract Methods
+from abc import ABC ,abstractmethod
+
+class parent(ABC):
+    @abstractmethod
+    def eat(self):
+        print("This madafaka is eating.")
+    @abstractmethod    
+    def sleep(self):
+        print("This nigga is sleeping.")
 
 
+class Child(parent):
+    pass
+try:
 
-class Astom_martin(Car):
-    def drive(self):
-        super().drive()  # Calling the drive method from the parent class
-        print("This Aston Martin is moving fast!")
+    object=Child()
 
+    object.eat()
 
-vehicle_1=Astom_martin()
-
-vehicle_1.drive()
+except TypeError:
+    print("Write individual methods of the child")

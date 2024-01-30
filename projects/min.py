@@ -1,7 +1,12 @@
-slice=slice(9,-4)
+import os
 
-web_1="http\\www.google.com"
-web_2="http\\www.wipedia.com"
 
-print(web_1[slice]+" website")
-print(web_2[slice] +" webssite")
+destination="C:\\Users\\Admin\\OneDrive\\Desktop\\wow post"
+
+
+try:
+    os.rmdir(destination)
+
+except FileNotFoundError:
+    print("file does not exist bro!!")
+

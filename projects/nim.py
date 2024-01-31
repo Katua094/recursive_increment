@@ -1,13 +1,14 @@
-#Exeptions
+# Car game, my guy
+print("Hello! Drive, stop, or quit\n")
 
+while True:
+    game = input("Your game, bro: ").lower()
 
-try:
-    def divide(q,i):
-    
-        result=q/i
-        return result
-    
-    divide(3,0)
-except ZeroDivisionError:
-    print("you cannot divide a nuber by zero!!")
-
+    if game == "drive":
+        print("The car is driving!!\n")
+    elif game == "stop":
+        print("The car has stopped\n")
+    elif game == "quit":
+        break
+    else:
+        print("Invalid input. Please enter 'drive', 'stop', or 'quit'.\n")

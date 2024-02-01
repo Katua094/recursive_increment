@@ -1,12 +1,10 @@
-import os
+def loud(text):
+    return text.upper()
+def quet(text):
+    return text.lower()
 
+def hello(func):
+    text=func("hello")
+    print(text)
 
-destination="C:\\Users\\Admin\\OneDrive\\Desktop\\wow post"
-
-
-try:
-    os.rmdir(destination)
-
-except FileNotFoundError:
-    print("file does not exist bro!!")
-
+hello(quet)

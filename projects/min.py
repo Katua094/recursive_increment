@@ -1,10 +1,12 @@
-def loud(text):
-    return text.upper()
-def quet(text):
-    return text.lower()
+#sort()
+#sorted_function
 
-def hello(func):
-    text=func("hello")
-    print(text)
-
-hello(quet)
+students=(
+    ("markson",19,"nigga"),
+    ("amiyo",18,"uloop")
+    
+)
+age=lambda ages:ages[1]
+sorted_students=sorted(students,key=age,reverse=True)
+for i in sorted_students:
+    print(i)

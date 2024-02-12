@@ -1,27 +1,27 @@
-import threading    
-import time
+from tkinter import *
+
+count=0
+def click():
+    global count 
+    count+=1
+    print(count)
+
+windows=Tk()
+windows.title("my first ever GUI")
+windows.geometry("500x500")
+windows.config(background="white")
+button=Button(windows,text="click me ",
+            font=('Arial',23),
+            bg="black",
+            fg="green",
+            relief=RAISED,
+            bd=10,
+            padx="10",
+            pady="10",
+            command=click,
+            )
+button.pack()
 
 
-def numbers():
-    
-    for i in range(5):
-        time.sleep(1)
-        print(f"thread1:{i}")
-    
-def letters():
-    
-    for i in "ABCDE":
-        time.sleep(1)
-        print(f"thread2:{i}")
 
-thread1=threading.Thread(target=numbers)
-thread2=threading.Thread(target=letters)
-
-thread1.start()
-thread2.start()
-thread1.join()
-thread2.join()
-
-
-print("The program has finished running")
-
+windows.mainloop()

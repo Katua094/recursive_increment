@@ -1,38 +1,28 @@
-class Prey:
-    alive = True
+from tkinter import *
 
-    def __init__(self, animal_type, species):
-        self.type = animal_type
-        self.species = species
+def backspace():
+    entry.delete(len(entry.get())-1,END)
+def delete():
+    entry.delete(0,END)
 
-    def killed(self):
-        return f"This {self.type} is getting killed."
-
-
-class Predator:
-    alive = True
-
-    def __init__(self, animal_type, species):
-        self.type = animal_type
-        self.species = species
-
-    def eat(self):
-        return f"This {self.type} is eating."
+def submit():
+    user_name=entry.get()
+    print(f"hello {user_name}")
+window= Tk()
 
 
-class Rabbit(Prey):
-    def run(self):
-        return f"This {self.type} is running."
+entry=Entry(window,
+            font=("Arial",40,),
+            fg="green",bg="black",show="")
+entry.insert(0,"NAME")
+submit_button=Button(window,text="submit" ,command=submit)
 
 
-class Lion(Predator):
-    pass
+delete_button=Button(window,text="delete" ,command=delete)
+backspace_button=Button(window,text="backspace",command=backspace)
 
-
-lion_1 = Lion("lion", "panthera leo")
-rabbit = Rabbit("Hare", "mono")
-
-print(lion_1.eat())
-print(rabbit.killed())
-print(lion_1.alive)
-print(rabbit.run())
+backspace_button.pack(side=RIGHT)
+delete_button.pack(side=RIGHT)
+submit_button.pack(side=RIGHT)
+entry.pack(side=LEFT)
+window.mainloop()

@@ -1,17 +1,26 @@
-#objects as argurments
-
-class Car:
-    def __init__(self,name):
-        self.name= name
-    def __str__(self):
-        return self.name
+from tkinter import *
 
 
-        
-def color(vehicle,color):
-    Car.color=color
-    print(f"this {vehicle} is {color} in color.")
+def display():
+    if x.get()==1:
+        print("you agree")
+    else:
+        print("you disagree")
+window= Tk()
+x= BooleanVar()
 
-dodge=Car("dodge")
-
-color(dodge,"red")
+image= PhotoImage(file="img.png")
+check_box=Checkbutton(window,
+                      text="do you agree",
+                      variable=x,
+                      onvalue=True,
+                      offvalue=False,
+                      font=("Arial",20,),
+                      fg="#00ff00",
+                      bg="black",
+                      command=display,
+                      compound=LEFT,
+                      activebackground="black",
+                      activeforeground="#00ff00")
+check_box.pack()
+window.mainloop()

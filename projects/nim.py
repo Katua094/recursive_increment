@@ -1,27 +1,23 @@
 from tkinter import *
 
-count=0
-def click():
-    global count 
-    count+=1
-    print(count)
+def submit():
+    input_text = text.get("1.0", END)
+    print(input_text)
 
-windows=Tk()
-windows.title("my first ever GUI")
-windows.geometry("500x500")
-windows.config(background="white")
-button=Button(windows,text="click me ",
-            font=('Arial',23),
-            bg="black",
-            fg="green",
-            relief=RAISED,
-            bd=10,
-            padx="10",
-            pady="10",
-            command=click,
-            )
+windows = Tk()
+
+text = Text(windows,
+            bg='light yellow',
+            fg='black',
+            font=('inkfree',12),
+            height=8,
+            width=20,
+            padx=20,
+            pady=20,
+            )  # Fixed the font name
+text.pack()
+
+button = Button(windows, text="submit", command=submit, font=('Arial', 15))
 button.pack()
-
-
 
 windows.mainloop()
